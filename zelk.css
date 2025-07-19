@@ -1,146 +1,418 @@
 /*         ▀▀█ █▀▀ █   █ █
            ▄▀  █▀▀ █   █▀▄
            ▀▀▀ ▀▀▀ ▀▀▀ ▀ ▀           */
+/* Modern ZorinOS Discord Theme 2025 - Enhanced for New Discord UI */
+
 /*--------------IMPORTS------------- */
-@import url(https://schnensch0.github.io/zelk/main.css);
-@import url(https://crearts-community.github.io/Settings-Icons/clients/powercord.css);
-/*--------------COLORS---------------*/
-/*------remove / and * to apply------*/
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/blue.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/green.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/gray.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/orange.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/purple.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/red.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/discord.css); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /*-------------VARIABLES-------------*/
 :root {
-  /* set to 'unset' to show */
-  --scrollbars: none;
-  /* user notes */
-  --notes: none;
-  /* direct message box */
-  --message: none;
-  /* set to '4px solid' to show */
-  --embed-color: none;
-  /* set to 'Inter', sans-serif !important to use Inter font*/
-  --font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  --border-radius-1: 10px;
-  --border-radius-2: 8px;
+  /* Enhanced scrollbars for modern look */
+  --scrollbars: thin;
+  --scrollbar-auto-thumb: rgba(189, 230, 251, 0.3);
+  --scrollbar-auto-track: rgba(39, 48, 52, 0.1);
+  
+  /* Modern features */
+  --notes: block;
+  --message: block;
+  --embed-color: 2px solid;
+  
+  /* Enhanced typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  --font-code: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  
+  /* Modern border radius values */
+  --border-radius-1: 12px;
+  --border-radius-2: 10px;
+  --border-radius-small: 8px;
+  --border-radius-large: 16px;
+  
+  /* New shadow system */
+  --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  
+  /* Glass morphism effect */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
+
 /*-----------CUSTOM COLORS-----------*/
 /*-------------DARK MODE-------------*/
-/*---------------BASIC---------------*/
 .theme-dark {
-  --accent-color: #bde6fb;
-  --background-1: #171d20;
-  --background-2: #1e2529;
-  --background-accent: #1e2529;
-  --border-color: #273034;
+  /* Core brand colors - enhanced for 2025 */
+  --accent-color: #00d4ff;
+  --accent-secondary: #bde6fb;
+  --accent-tertiary: #7dd3fc;
+  
+  /* Background system with depth */
+  --background-1: #0f1419;
+  --background-2: #1a2026;
+  --background-3: #242b32;
+  --background-accent: linear-gradient(135deg, #1a2026 0%, #242b32 100%);
+  --border-color: rgba(189, 230, 251, 0.12);
+  --border-color-hover: rgba(189, 230, 251, 0.2);
+  
+  /* Glass morphism backgrounds */
+  --glass-primary: rgba(15, 20, 25, 0.8);
+  --glass-secondary: rgba(26, 32, 38, 0.6);
 }
+
 /*-------------LIGHT MODE------------*/
 .theme-light {
-  --accent-color: #22c5fd;
+  /* Core brand colors - refined */
+  --accent-color: #0ea5e9;
+  --accent-secondary: #0284c7;
+  --accent-tertiary: #0369a1;
+  
+  /* Clean light backgrounds */
   --background-1: #ffffff;
-  --background-2: #f5f7fa;
-  --background-accent: var(--background-2);
-  --border-color: transparent;
+  --background-2: #f8fafc;
+  --background-3: #f1f5f9;
+  --background-accent: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-color-hover: rgba(15, 23, 42, 0.15);
+  
+  /* Glass morphism backgrounds */
+  --glass-primary: rgba(255, 255, 255, 0.8);
+  --glass-secondary: rgba(248, 250, 252, 0.6);
 }
-/*-------------ADVANCED--------------*/
+
+/*-------------ENHANCED DARK MODE-------------*/
 .theme-dark {
-  /* background */
+  /* Background hierarchy */
   --background-primary: var(--background-1);
   --background-primary-alt: var(--background-1);
-  --background-secondary: var(--background-1);
-  --background-secondary-alt: var(--background-1);
-  --background-tertiary: var(--background-2);
-  --background-accent-gradient: var(--background-2);
-  --background-floating: var(--background-1);
-  --background-mentioned: #bde6fb10;
-  --background-mentioned-hover: #bde6fb15;
-  /* modifiers */
-  --background-modifier-hover: #262e33;
-  --background-modifier-active: #495a63;
+  --background-secondary: var(--background-2);
+  --background-secondary-alt: var(--background-2);
+  --background-tertiary: var(--background-3);
+  --background-accent-gradient: var(--background-accent);
+  --background-floating: var(--glass-primary);
+  --background-nested-floating: var(--background-3);
+  
+  /* Modern mention system */
+  --background-mentioned: rgba(0, 212, 255, 0.08);
+  --background-mentioned-hover: rgba(0, 212, 255, 0.12);
+  --background-message-highlight: rgba(0, 212, 255, 0.05);
+  
+  /* Interactive states */
+  --background-modifier-hover: rgba(189, 230, 251, 0.05);
+  --background-modifier-active: rgba(189, 230, 251, 0.1);
   --background-modifier-selected: var(--accent-color);
-  --background-modifier-accent: transparent;
-  --background-message-hover: transparent;
-  /* text */
-  --text-normal: var(--accent-color);
-  --text-positive: var(--text-normal);
-  --text-muted: #6d8692;
-  --text-link: #edf8fe;
-  --interactive-selected: var(--background-primary);
-  --interactive-active: var(--text-normal);
-  --interactive-normal: var(--text-normal);
-  --interactive-muted: var(--button-background-active);
-  --channels-default: var(--text-muted);
-  --header-primary: var(--text-normal);
-  --header-secondary: var(--text-muted);
-  /* more */
-  --settings-icon-color: #8eacbc;
-  --control-brand-foreground: var(--accent-color);
-  --info-warning-foreground: var(--accent-color);
-  --tab-selected: #354249;
-  --switch: #3d4c53;
-  --activity-card-background: var(--background-1);
-  --brand-experiment: var(--accent-color) !important;
-  /* buttons */
-  --button-background: #2a3439;
-  --button-background-hover: #354249;
-  --button-background-active: #4d5f68;
-  --button-accent: var(--accent-color);
-  --button-accent-hover: #d2f3ff;
-  --button-accent-active: #8dd4f8;
-  --button-destructive: #fb7c7c;
-  --button-destructive-hover: #ff929b;
-  --button-destructive-active: #fa4a4a;
-}
-.theme-light {
-  /* background */
-  --background-primary: var(--background-1);
-  --background-primary-alt: var(--background-1);
-  --background-secondary: var(--background-1);
-  --background-secondary-alt: var(--background-1);
-  --background-tertiary: var(--background-2);
-  --background-accent-gradient: var(--background-2);
-  --background-floating: var(--background-1);
-  --background-mentioned: #22c5fd10;
-  --background-mentioned-hover: #22c5fd15;
-  /* modifiers */
-  --background-modifier-hover: transparent;
-  --background-modifier-active: #b7c2cc;
-  --background-modifier-selected: var(--accent-color);
-  --background-modifier-accent: transparent;
-  --background-message-hover: transparent;
-  /* text */
-  --text-normal: #123354;
-  --text-positive: var(--text-normal);
-  --text-muted: #8495a7;
-  --text-link: #15a6f0;
-  --interactive-selected: var(--background-primary);
-  --interactive-active: var(--text-normal);
-  --interactive-normal: var(--text-normal);
+  --background-modifier-accent: rgba(0, 212, 255, 0.1);
+  --background-message-hover: rgba(255, 255, 255, 0.02);
+  
+  /* Enhanced text hierarchy */
+  --text-normal: #e2e8f0;
+  --text-primary: var(--accent-secondary);
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-link: var(--accent-color);
+  --text-link-low-saturation: #7dd3fc;
+  --text-positive: #22c55e;
+  --text-warning: #f59e0b;
+  --text-danger: #ef4444;
+  
+  /* Interactive elements */
+  --interactive-normal: var(--text-secondary);
+  --interactive-hover: var(--text-normal);
+  --interactive-active: var(--accent-color);
   --interactive-muted: var(--text-muted);
-  --channels-default: var(--text-normal);
+  --interactive-selected: var(--background-1);
+  
+  /* Channel and header colors */
+  --channels-default: var(--text-secondary);
+  --channel-icon: var(--text-muted);
   --header-primary: var(--text-normal);
-  --header-secondary: var(--text-muted);
-  /* more */
-  --settings-icon-color: #566e86;
+  --header-secondary: var(--text-secondary);
+  
+  /* Modern UI elements */
   --control-brand-foreground: var(--accent-color);
-  --info-warning-foreground: var(--accent-color);
-  --tab-selected: var(--background-1);
-  --switch: #c8d0d9;
-  --activity-card-background: var(--background-1);
+  --control-brand-foreground-new: var(--accent-color);
+  --info-positive-foreground: var(--text-positive);
+  --info-warning-foreground: var(--text-warning);
+  --info-danger-foreground: var(--text-danger);
+  
+  /* Tabs and switches */
+  --tab-selected: var(--background-3);
+  --switch-background: #374151;
+  --switch-knob: var(--accent-color);
+  
+  /* Cards and activities */
+  --activity-card-background: var(--background-2);
+  --card-primary-bg: var(--background-2);
+  --card-secondary-bg: var(--background-3);
+  
+  /* Brand colors */
   --brand-experiment: var(--accent-color) !important;
-  /* buttons */
-  --button-background: var(--background-1);
-  --button-background-hover: #d3dae1;
-  --button-background-active: #b1bcc8;
-  --button-accent: var(--accent-color);
-  --button-accent-hover: #22c5fd;
-  --button-accent-active: #0d87c5;
-  --button-destructive: #fb7c7c;
-  --button-destructive-hover: #ff929b;
-  --button-destructive-active: #fa4a4a;
+  --brand-experiment-100: rgba(0, 212, 255, 0.05);
+  --brand-experiment-200: rgba(0, 212, 255, 0.1);
+  --brand-experiment-300: rgba(0, 212, 255, 0.15);
+  --brand-experiment-400: rgba(0, 212, 255, 0.2);
+  --brand-experiment-500: var(--accent-color);
+  --brand-experiment-600: #00bde6;
+  
+  /* Enhanced button system */
+  --button-primary-background: var(--accent-color);
+  --button-primary-background-hover: #00bde6;
+  --button-primary-background-active: #0099cc;
+  --button-primary-background-disabled: rgba(0, 212, 255, 0.3);
+  
+  --button-secondary-background: rgba(189, 230, 251, 0.1);
+  --button-secondary-background-hover: rgba(189, 230, 251, 0.15);
+  --button-secondary-background-active: rgba(189, 230, 251, 0.2);
+  
+  --button-outline-primary-background: transparent;
+  --button-outline-primary-border: var(--accent-color);
+  --button-outline-primary-background-hover: rgba(0, 212, 255, 0.05);
+  
+  --button-danger-background: #ef4444;
+  --button-danger-background-hover: #dc2626;
+  --button-danger-background-active: #b91c1c;
+}
+
+/*-------------ENHANCED LIGHT MODE-------------*/
+.theme-light {
+  /* Background hierarchy */
+  --background-primary: var(--background-1);
+  --background-primary-alt: var(--background-1);
+  --background-secondary: var(--background-2);
+  --background-secondary-alt: var(--background-2);
+  --background-tertiary: var(--background-3);
+  --background-accent-gradient: var(--background-accent);
+  --background-floating: var(--glass-primary);
+  --background-nested-floating: var(--background-3);
+  
+  /* Modern mention system */
+  --background-mentioned: rgba(14, 165, 233, 0.08);
+  --background-mentioned-hover: rgba(14, 165, 233, 0.12);
+  --background-message-highlight: rgba(14, 165, 233, 0.05);
+  
+  /* Interactive states */
+  --background-modifier-hover: rgba(15, 23, 42, 0.04);
+  --background-modifier-active: rgba(15, 23, 42, 0.08);
+  --background-modifier-selected: var(--accent-color);
+  --background-modifier-accent: rgba(14, 165, 233, 0.1);
+  --background-message-hover: rgba(0, 0, 0, 0.02);
+  
+  /* Enhanced text hierarchy */
+  --text-normal: #0f172a;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-link: var(--accent-color);
+  --text-link-low-saturation: #0369a1;
+  --text-positive: #059669;
+  --text-warning: #d97706;
+  --text-danger: #dc2626;
+  
+  /* Interactive elements */
+  --interactive-normal: var(--text-secondary);
+  --interactive-hover: var(--text-primary);
+  --interactive-active: var(--accent-color);
+  --interactive-muted: var(--text-muted);
+  --interactive-selected: var(--background-1);
+  
+  /* Channel and header colors */
+  --channels-default: var(--text-primary);
+  --channel-icon: var(--text-secondary);
+  --header-primary: var(--text-primary);
+  --header-secondary: var(--text-secondary);
+  
+  /* Modern UI elements */
+  --control-brand-foreground: var(--accent-color);
+  --control-brand-foreground-new: var(--accent-color);
+  --info-positive-foreground: var(--text-positive);
+  --info-warning-foreground: var(--text-warning);
+  --info-danger-foreground: var(--text-danger);
+  
+  /* Tabs and switches */
+  --tab-selected: var(--background-1);
+  --switch-background: #cbd5e1;
+  --switch-knob: var(--accent-color);
+  
+  /* Cards and activities */
+  --activity-card-background: var(--background-1);
+  --card-primary-bg: var(--background-1);
+  --card-secondary-bg: var(--background-2);
+  
+  /* Brand colors */
+  --brand-experiment: var(--accent-color) !important;
+  --brand-experiment-100: rgba(14, 165, 233, 0.05);
+  --brand-experiment-200: rgba(14, 165, 233, 0.1);
+  --brand-experiment-300: rgba(14, 165, 233, 0.15);
+  --brand-experiment-400: rgba(14, 165, 233, 0.2);
+  --brand-experiment-500: var(--accent-color);
+  --brand-experiment-600: #0284c7;
+  
+  /* Enhanced button system */
+  --button-primary-background: var(--accent-color);
+  --button-primary-background-hover: #0284c7;
+  --button-primary-background-active: #0369a1;
+  --button-primary-background-disabled: rgba(14, 165, 233, 0.3);
+  
+  --button-secondary-background: rgba(15, 23, 42, 0.05);
+  --button-secondary-background-hover: rgba(15, 23, 42, 0.08);
+  --button-secondary-background-active: rgba(15, 23, 42, 0.12);
+  
+  --button-outline-primary-background: transparent;
+  --button-outline-primary-border: var(--accent-color);
+  --button-outline-primary-background-hover: rgba(14, 165, 233, 0.05);
+  
+  --button-danger-background: #dc2626;
+  --button-danger-background-hover: #b91c1c;
+  --button-danger-background-active: #991b1b;
+}
+
+/*----------MODERN ENHANCEMENTS----------*/
+/* Glass morphism effects */
+.layer_cd0de5,
+.container_ca50b9,
+.sidebar_a4d4d9 {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: var(--glass-primary) !important;
+  border: 1px solid var(--glass-border);
+}
+
+/* Modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-auto-thumb);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(189, 230, 251, 0.5);
+}
+
+/* Enhanced message styling */
+.message_d5deea {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.message_d5deea:hover {
+  background: var(--background-message-hover);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-small);
+}
+
+/* Modern embeds */
+.embedFull_fd0021 {
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--shadow-small);
+  border-left: var(--embed-color) var(--accent-color);
+}
+
+/* Enhanced voice channels */
+.content_f9f2ca {
+  border-radius: var(--border-radius-small);
+  transition: all 0.2s ease;
+}
+
+.content_f9f2ca:hover {
+  background: var(--background-modifier-hover);
+  box-shadow: var(--shadow-small);
+}
+
+/* Modern buttons with better feedback */
+.button_dd4f85 {
+  border-radius: var(--border-radius-2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+
+.button_dd4f85:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Enhanced status indicators */
+.status_dc67b8 {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--background-primary);
+}
+
+/* Modern search bar */
+.search_c70ea2 {
+  border-radius: var(--border-radius-large);
+  background: var(--glass-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.search_c70ea2:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+/* Enhanced tooltips */
+.tooltip_b59d84 {
+  background: var(--glass-primary);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--shadow-large);
+}
+
+/* Modern context menus */
+.menu_dc52c6 {
+  background: var(--glass-primary);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--shadow-large);
+}
+
+/* Enhanced user panels */
+.panels_a4d4d9 {
+  background: var(--glass-secondary);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Modern loading animations */
+@keyframes modernPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.spinner_c8cc43 {
+  animation: modernPulse 1.5s ease-in-out infinite;
+}
+
+/* Enhanced code blocks */
+.markup_a7e664 code {
+  background: var(--background-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-small);
+  font-family: var(--font-code);
+}
+
+/* Modern reactions */
+.reaction_ec6b19 {
+  border-radius: var(--border-radius-2);
+  background: var(--glass-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.reaction_ec6b19:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--accent-color);
+  transform: scale(1.02);
 }
